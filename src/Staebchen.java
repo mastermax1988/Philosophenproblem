@@ -1,7 +1,7 @@
 public class Staebchen {
     // Attribut
     private boolean wirdBenutzt = false;
-//get()-Methode
+    //get()-Methode
     public synchronized void get() throws InterruptedException
     {
         while(wirdBenutzt)
@@ -11,7 +11,8 @@ public class Staebchen {
         }
         wirdBenutzt = true;
     }
-//put()-Methode
+
+    //put()-Methode
     public synchronized void put()
     {
         wirdBenutzt = false;

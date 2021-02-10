@@ -20,8 +20,16 @@ public class Philosoph extends Thread {
                 Thread.sleep(rand.nextInt(500) + 500);
 
                 // hungrig (versuche Staebchen zu erhalten)
-                staebchen[0].get();
-                staebchen[1].get();
+                if(id==0)
+                {
+                    staebchen[0].get();
+                    staebchen[1].get();
+                }
+                else
+                {
+                    staebchen[1].get();
+                    staebchen[0].get();
+                }
 
                 // essen
                 System.out.println("Philosoph "+ id + " isst");
